@@ -1,0 +1,5 @@
+<h2>Here is the sample data from the NestJS API: </h2>
+<p *ngIf="sample$ | async as sample; else loading">{{sample.message}}</p>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

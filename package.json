@@ -7,9 +7,9 @@
   "scripts": {
     "ng": "ng",
     "clean": "rimraf dist",
-    "build:api": "tsc -p api/tsconfig.build.json",
+    "build:api": "tsc -P api/tsconfig.build.json",
     "build:ui": "ng build --prod",
-    "build": "npm-run-all clean build:ui build api",
+    "build": "npm-run-all clean build:ui build:api",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "node dist/main.js",
     "start:api:dev": "concurrently --handle-input \"wait-on dist/main.js && nodemon\" \"tsc -w -p api/tsconfig.build.json\" ",
@@ -72,7 +72,7 @@
     "tsconfig-paths": "3.8.0",
     "tslib": "^1.9.0",
     "tslint": "5.16.0",
-    "typescript": "3.4.3",
+    "typescript": "3.2.4",
     "wait-on": "^3.2.0",
     "zone.js": "~0.8.26"
   },
